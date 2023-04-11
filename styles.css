@@ -114,3 +114,10 @@ body {
         padding: 6px 12px;
     }
 }
+.product-image {
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(2.5);
+}
