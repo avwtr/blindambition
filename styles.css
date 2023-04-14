@@ -1,11 +1,41 @@
+
 body {
     margin: 0;
     font-family: 'Philosopher', sans-serif;
     font-style: italic;
     font-weight: 700;
     color: white;
+    background-color: black;
 }
 
+/* Index.html styles */
+.landing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+.center-gif {
+    width: 200px;
+    height: auto;
+}
+
+.enter-site-btn {
+    position: absolute;
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: none;
+    top: 38%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+/* Main.html styles */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -22,7 +52,7 @@ body {
 .gif-grid-item {
     width: 100%;
     height: 100%;
-    background-image: url('gipfy.gif');
+    background-image: url('giphy.gif');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -46,6 +76,7 @@ body {
     border-radius: 8px;
     z-index: 1;
     text-align: center;
+    max-width: 80%;
 }
 
 .product-title {
@@ -63,6 +94,11 @@ body {
 .product-image {
     max-width: 200px;
     margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(2.5);
 }
 
 .product-price {
@@ -82,6 +118,11 @@ body {
     transition: background-color 0.5s;
 }
 
+.purchase-button:hover {
+    background-color: darkred;
+}
+
+/* Responsive styles */
 @media screen and (max-width: 768px) {
     .logo {
         max-width: 100px;
@@ -89,7 +130,6 @@ body {
 
     .product-container {
         padding: 20px;
-        max-width: 90%;
     }
 
     .product-title {
@@ -104,75 +144,12 @@ body {
         max-width: 100%;
         margin-bottom: 20px;
     }
-}
 
-.product-image {
-    transition: transform 0.3s ease;
+    .enter-site-btn {
+        top: 45%;
+        left: 50%;
+    }
 }
-
-.product-image:hover {
+.product-image.enlarged {
     transform: scale(2.5);
-}
-
-/* Index.html styles */
-body {
-    background-color: black;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.landing-container {
-    position: relative;
-}
-
-.center-gif {
-    width: 200px;
-    height: auto;
-}
-
-.enter-site-btn {
-    position: absolute;
-    color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-weight: 700;
-    font-style: italic;
-    text-decoration: none;
-    top: 38%;
-    left: 67%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-}
-
-.purchase-button-container {
-    position: relative;
-    display: inline-block;
-}
-
-.sellfy-buy-button.purchase-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    padding: 25px 30px;
-    border: none;
-    border-radius: 4px;
-    text-align: center;
-    cursor: pointer;
-    background-color: red;
-    color: white;
-    text-decoration: none;
-    transition: background-color 0.5s;
-}
-
-.sellfy-buy-button.purchase-button:hover {
-    background-color: darkred;
-}
-.sellfy-buy-button.purchase-button span {
-    display: inline-block;
-    position: relative;
-    z-index: 2;
 }

@@ -1,5 +1,6 @@
 const gridContainer = document.querySelector(".grid-container");
 const gifPath = "giphy.gif";
+const productImages = document.querySelectorAll(".product-image");
 
 function createGifGridItem() {
     const gridItem = document.createElement("div");
@@ -19,13 +20,33 @@ function fillBackgroundWithGifs() {
     }
 }
 
+function toggleImageEnlargement(e) {
+    e.target.classList.toggle("enlarged");
+}
+
 fillBackgroundWithGifs();
 window.addEventListener("resize", fillBackgroundWithGifs);
-const purchaseButton = document.querySelector('.purchase-button');
+
+// Add event listeners to product images
+productImages.forEach(image => {
+    image.addEventListener("click", toggleImageEnlargement);
+});
+const purchaseButton = document.querySelector('.sellfy-buy-button.purchase-button');
 const colors = ['red', 'green', 'yellow', 'blue'];
 let currentColorIndex = 0;
 
-setInterval(() => {
+function changeButtonColor() {
     currentColorIndex = (currentColorIndex + 1) % colors.length;
     purchaseButton.style.backgroundColor = colors[currentColorIndex];
-}, 1000);
+}
+
+fillBackgroundWithGifs();
+window.addEventListener("resize", fillBackgroundWithGifs);
+
+// Add event listeners to product images
+productImages.forEach(image => {
+    image.addEventListener("click", toggleImageEnlargement);
+});
+
+// Set the interval for the color-changing effect on the purchase button
+setInterval(changeButtonColor, 1000);
