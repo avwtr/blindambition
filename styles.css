@@ -145,6 +145,37 @@ body {
         margin-bottom: 20px;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .product-container {
+        padding: 15px;
+        max-width: 80%;
+    }
+
+    .product-title {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .product-image {
+        max-width: 150px;
+        margin: 0 5px;
+        margin-bottom: 10px;
+    }
+
+    .product-price {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .sellfy-buy-button.purchase-button {
+        font-size: 1rem;
+        padding: 15px 20px;
+    }
+}
+
+
+
 .product-image.enlarged {
     transform: scale(2.5);
 }
