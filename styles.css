@@ -122,7 +122,6 @@ body {
     background-color: darkred;
 }
 
-/* Responsive styles */
 @media screen and (max-width: 768px) {
     .logo {
         max-width: 100px;
@@ -130,6 +129,7 @@ body {
 
     .product-container {
         padding: 20px;
+        max-width: 90%;
     }
 
     .product-title {
@@ -137,42 +137,57 @@ body {
     }
 
     .product-images {
+        display: flex;
         flex-direction: column;
+        align-items: center; /* Add this line */
     }
 
     .product-image {
         max-width: 100%;
         margin-bottom: 20px;
     }
+
+    /* Move this section to the new media query below */
+    /*.purchase-button {
+        font-size: 1rem;
+        padding: 15px 20px;
+    }*/
 }
 
 @media screen and (max-width: 480px) {
     .product-container {
         padding: 15px;
-        max-width: 80%;
+        max-width: 90%;
     }
 
     .product-title {
         font-size: 1.2rem;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+    }
+
+    .product-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .product-image {
         max-width: 150px;
-        margin: 0 5px;
         margin-bottom: 10px;
     }
 
     .product-price {
         font-size: 1.2rem;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     .sellfy-buy-button.purchase-button {
         font-size: 1rem;
-        padding: 15px 20px;
+        padding: 15px 10px; /* Decrease the horizontal padding */
+        width: calc(100% - 20px); 
     }
 }
+
 
 
 
