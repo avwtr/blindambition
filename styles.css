@@ -122,6 +122,19 @@ body {
     background-color: darkred;
 }
 
+.enter-site-btn {
+    position: absolute;
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: none;
+    top: 46%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
     .logo {
         max-width: 100px;
@@ -147,11 +160,11 @@ body {
         margin-bottom: 20px;
     }
 
-    /* Move this section to the new media query below */
-    /*.purchase-button {
-        font-size: 1rem;
-        padding: 15px 20px;
-    }*/
+    .enter-site-btn {
+        top: 50%; /* Adjust the value as needed */
+        left: 80%; /* Increase the value to move the text to the right */
+        transform: none; /* Remove the transform property */
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -186,6 +199,11 @@ body {
         padding: 15px 10px; /* Decrease the horizontal padding */
         width: calc(100% - 20px); 
     }
+    .enter-site-btn {
+        top: 45%; /* Adjust the value as needed */
+        left: 45%; /* Increase the value to move the text to the right */
+        transform: none; /* Remove the transform property */
+    }
 }
 
 
@@ -194,16 +212,5 @@ body {
 .product-image.enlarged {
     transform: scale(2.5);
 }
-.enter-site-btn {
-    position: absolute;
-    color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-weight: 700;
-    font-style: italic;
-    text-decoration: none;
-    top: 46%;
-    left: 52%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-}
+
 
