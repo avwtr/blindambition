@@ -50,3 +50,9 @@ productImages.forEach(image => {
 
 // Set the interval for the color-changing effect on the purchase button
 setInterval(changeButtonColor, 1000);
+document.addEventListener('click', (event) => {
+    const enlargedImages = document.querySelectorAll('.product-image.enlarged');
+    enlargedImages.forEach((image) => {
+        image.classList.remove('enlarged');
+    });
+});
